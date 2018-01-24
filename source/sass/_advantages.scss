@@ -9,14 +9,10 @@
 
 .advantages__title {
   @include font-h;
-
-  line-height: 26px;
-  color: $color-h-lightbg;
 }
 
 .advantages__description {
   @include font-p;
 
   line-height: 21px;
-  color: $color-p-lightbg;
 }

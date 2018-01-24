@@ -5,15 +5,11 @@
 }
 
 .reservation__title {
-  @include font-btn;
+  @include font-h;
 
-  line-height: 26px;
-  color: $color-h-lightbg;
+  font-size: 21px;
 }
 
 .reservation__description {
   @include font-p;
-
-  line-height: 24px;
-  color: $color-p-lightbg;
 }

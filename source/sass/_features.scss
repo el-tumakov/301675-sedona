@@ -6,16 +6,12 @@
 
 .features__slogan {
   @include font-h;
-
-  line-height: 26px;
-  color: $color-h-lightbg;
 }
 
 .features__intro {
   @include font-p;
 
   line-height: 26px;
-  color: $color-p-lightbg;
 }
 
 .features__list {
@@ -35,10 +31,8 @@
 .features__title {
   @include font-h;
 
-  line-height: 26px;
-  color: $color-h-lightbg;
   &--darkbg {
-    color: $color-h-darkbg;
+    color: $color-h-light;
   }
 }
 
@@ -46,9 +40,9 @@
   @include font-p;
 
   line-height: 21px;
-  color: $color-p-lightbg;
+
   &--darkbg {
-    color: $color-p-darkbg;
+    color: $color-p-light;
   }
 }
 
@@ -56,8 +50,8 @@
   @include font-p;
 
   line-height: 21px;
-  color: $color-p-lightbg;
+
   &--darkbg {
-    color: $color-p-darkbg;
+    color: $color-p-light;
   }
 }

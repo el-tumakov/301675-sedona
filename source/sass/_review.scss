@@ -1,13 +1,13 @@
 @import "variables";
 
-.video {
+.review {
   text-align: center;
 }
 
-.video__title {
+.review__title {
   @include font-h;
 }
 
-.video__description {
+.review__intro {
   @include font-p;
 }
