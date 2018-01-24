@@ -1,0 +1,33 @@
+// Шаблоны для текста
+
+$font-family: "PT Sans", "Arial", sans-serif;
+$color-h-lightbg: #000000;
+$color-h-darkbg: #ffffff;
+$color-p-lightbg: #333333;
+$color-p-darkbg: #ffffff;
+$color-btn: #ffffff;
+
+@mixin font-h {
+  font-family: $font-family;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@mixin font-p {
+  font-family: $font-family;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+@mixin font-btn {
+  font-family: $font-family;
+  font-size: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+// Шаблоны для цветов
+
+$color-bg-main: #81b3d2;
