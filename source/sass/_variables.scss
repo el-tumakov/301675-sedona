@@ -1,11 +1,13 @@
-// Шаблоны для текста
+// Переменные для текста
 
 $font-family: "PT Sans", "Arial", sans-serif;
 $color-h-lightbg: #000000;
 $color-h-darkbg: #ffffff;
 $color-p-lightbg: #333333;
 $color-p-darkbg: #ffffff;
-$color-btn: #ffffff;
+
+
+// Примеси для вертикального ритма
 
 @mixin font-h {
   font-family: $font-family;
@@ -21,14 +23,37 @@ $color-btn: #ffffff;
   text-transform: uppercase;
 }
 
-@mixin font-btn {
-  font-family: $font-family;
-  font-size: 21px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
 
-// Шаблоны для цветов
+// Переменные фоновых цветов
 
 $color-bg-dark: #81b3d2;
 $color-bg-light: #ffffff;
+$color-bg-light-2: #eeeeee;
+
+
+// Переменные для кнопок
+
+$bgcolor-btn: #81b3d2;
+$color-btn: #ffffff;
+
+
+// Примеси для кнопок
+
+@mixin btn {
+  display: block;
+  width: 280px;
+  min-height: 42px;
+  padding-top: 16px;
+
+  background-color: $bgcolor-btn;
+}
+
+@mixin font-btn {
+  font-family: $font-family;
+  font-size: 21px;
+  line-height: 26px;
+  color: $color-btn;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}

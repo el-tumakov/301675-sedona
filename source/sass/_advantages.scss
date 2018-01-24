@@ -1,0 +1,22 @@
+@import "variables";
+
+.advantages__list {
+  text-align: left;
+
+  list-style: none;
+  background-color: $color-bg-light;
+}
+
+.advantages__title {
+  @include font-h;
+
+  line-height: 26px;
+  color: $color-h-lightbg;
+}
+
+.advantages__description {
+  @include font-p;
+
+  line-height: 21px;
+  color: $color-p-lightbg;
+}

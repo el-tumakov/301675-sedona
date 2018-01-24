@@ -5,39 +5,59 @@
 }
 
 .features__slogan {
-  line-height: 26px;
-
   @include font-h;
+
+  line-height: 26px;
+  color: $color-h-lightbg;
 }
 
 .features__intro {
-  line-height: 26px;
-
   @include font-p;
+
+  line-height: 26px;
+  color: $color-p-lightbg;
 }
 
 .features__list {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
-.features__title {
-  line-height: 26px;
+.features__item {
+  background-color: $color-bg-light-2;
+  &--darkbg {
+    background-color: $color-bg-dark;
+  }
+}
 
+.features__title {
   @include font-h;
+
+  line-height: 26px;
+  color: $color-h-lightbg;
+  &--darkbg {
+    color: $color-h-darkbg;
+  }
 }
 
 .features__number {
-  line-height: 21px;
-
   @include font-p;
+
+  line-height: 21px;
+  color: $color-p-lightbg;
+  &--darkbg {
+    color: $color-p-darkbg;
+  }
 }
 
 .features__description {
-  line-height: 21px;
-
   @include font-p;
+
+  line-height: 21px;
+  color: $color-p-lightbg;
+  &--darkbg {
+    color: $color-p-darkbg;
+  }
 }
-
-

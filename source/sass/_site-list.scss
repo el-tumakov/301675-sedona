@@ -13,9 +13,9 @@
 }
 
 .site-list__link {
+  @include font-h;
+
   line-height: 40px;
   color: $color-h-darkbg;
   text-decoration: none;
-
-  @include font-h;
 }

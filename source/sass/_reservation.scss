@@ -1,0 +1,19 @@
+@import "variables";
+
+.reservation {
+  text-align: center;
+}
+
+.reservation__title {
+  @include font-btn;
+
+  line-height: 26px;
+  color: $color-h-lightbg;
+}
+
+.reservation__description {
+  @include font-p;
+
+  line-height: 24px;
+  color: $color-p-lightbg;
+}

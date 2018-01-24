@@ -1,0 +1,13 @@
+@import "variables";
+
+.social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social__item {
+  width: 46px;
+  height: 48px;
+  background-color: $color-bg-dark;
+}

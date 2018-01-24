@@ -1,0 +1,22 @@
+@import "variables";
+
+.main-footer {
+  width: 320px;
+
+  text-align: center;
+}
+
+.main-footer__hashtag {
+  @include font-h;
+
+  font-size: 21px;
+  line-height: 26px;
+  color: $color-h-lightbg;
+}
+
+.main-footer__copyright {
+  @include font-p;
+
+  line-height: 26px;
+  color: $color-h-lightbg;
+}

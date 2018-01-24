@@ -1,0 +1,6 @@
+@import "variables";
+
+.button {
+  @include btn;
+  @include font-btn;
+}
