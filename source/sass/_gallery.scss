@@ -1,0 +1,53 @@
+@import "variables";
+
+.gallery {
+  text-align: center;
+}
+
+.gallery__title {
+  @include font-h;
+
+  line-height: 26px;
+  color: $color-h-lightbg;
+}
+
+.gallery__intro {
+  @include font-p;
+
+  line-height: 24px;
+  color: $color-p-lightbg;
+}
+
+.gallery__list {
+  margin: 0;
+  padding: 0;
+
+  text-align: left;
+
+  list-style: none;
+}
+
+.gallery__image-title {
+  @include font-h;
+
+  font-size: 14px;
+  line-height: 24px;
+  color: $color-h-lightbg;
+}
+
+.gallery__author {
+  @include font-p;
+
+  font-size: 14px;
+  line-height: 24px;
+  color: $color-p-lightbg;
+  text-transform: none;
+}
+
+.gallery__likes {
+  @include font-h;
+
+  font-size: 14px;
+  line-height: 24px;
+  color: $color-h-lightbg;
+}

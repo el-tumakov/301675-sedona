@@ -8,4 +8,10 @@
   background-image: url("../img/text-sedona-index.svg"), url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: 280px 213px, 768px 389px;
+
+  &--inner-page {
+    background-image: url("../img/text-sedona.svg"), url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 229px 39px, 768px 389px;
+  }
 }

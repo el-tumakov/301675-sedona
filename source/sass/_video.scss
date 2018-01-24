@@ -1,0 +1,19 @@
+@import "variables";
+
+.video {
+  text-align: center;
+}
+
+.video__title {
+  @include font-h;
+
+  line-height: 26px;
+  color: $color-h-lightbg;
+}
+
+.video__description {
+  @include font-p;
+
+  line-height: 24px;
+  color: $color-p-lightbg;
+}
