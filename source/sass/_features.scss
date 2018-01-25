@@ -1,0 +1,50 @@
+.features {
+  text-align: center;
+}
+
+.features__slogan {
+  @include font-h;
+}
+
+.features__intro {
+  @include font-p;
+
+  line-height: 26px;
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.features__item {
+  background-color: $color-bg-light-2;
+
+  &--darkbg {
+    color: $color-h-light;
+
+    background-color: $color-bg-dark;
+  }
+}
+
+.features__title {
+  @include font-h;
+
+  color: inherit;
+}
+
+.features__number {
+  @include font-p;
+
+  line-height: 21px;
+  color: inherit;
+}
+
+.features__description {
+  @include font-p;
+
+  line-height: 21px;
+  color: inherit;
+}

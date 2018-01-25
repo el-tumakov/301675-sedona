@@ -1,0 +1,11 @@
+.review {
+  text-align: center;
+}
+
+.review__title {
+  @include font-h;
+}
+
+.review__intro {
+  @include font-p;
+}

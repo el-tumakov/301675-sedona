@@ -1,0 +1,16 @@
+.advantages__list {
+  text-align: left;
+
+  list-style: none;
+  background-color: $color-bg-light;
+}
+
+.advantages__title {
+  @include font-h;
+}
+
+.advantages__description {
+  @include font-p;
+
+  line-height: 21px;
+}

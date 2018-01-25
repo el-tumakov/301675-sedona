@@ -1,0 +1,40 @@
+.gallery {
+  text-align: center;
+}
+
+.gallery__title {
+  @include font-h;
+}
+
+.gallery__intro {
+  @include font-p;
+}
+
+.gallery__list {
+  margin: 0;
+  padding: 0;
+
+  text-align: left;
+
+  list-style: none;
+}
+
+.gallery__image-title {
+  @include font-h;
+
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.gallery__author {
+  @include font-p;
+
+  text-transform: none;
+}
+
+.gallery__likes {
+  @include font-h;
+
+  font-size: 14px;
+  line-height: 24px;
+}

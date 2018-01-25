@@ -1,0 +1,48 @@
+.review-form {
+  text-align: left;
+}
+
+.review-form__fieldset {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+}
+
+.review-form__title {
+  @include font-h;
+
+  text-align: center;
+}
+
+.review-form__label {
+  @include font-p;
+
+  line-height: 26px;
+
+  &--bold {
+    @include font-h;
+
+    text-transform: none;
+  }
+}
+
+.review-form__input {
+  @include font-h;
+
+  text-transform: none;
+
+  border: 0;
+  background-color: $color-input;
+
+  &::placeholder {
+    color: $color-h-dark;
+  }
+}
+
+.review-form__button {
+  padding: 0;
+
+  border: 0;
+}

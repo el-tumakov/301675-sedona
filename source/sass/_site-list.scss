@@ -1,0 +1,19 @@
+.site-list {
+  display: none;
+  margin: 0;
+  padding: 0;
+
+  background-color: $color-bg-dark;
+}
+
+.site-list__item {
+  text-align: center;
+}
+
+.site-list__link {
+  @include font-h;
+
+  line-height: 40px;
+  color: $color-h-light;
+  text-decoration: none;
+}

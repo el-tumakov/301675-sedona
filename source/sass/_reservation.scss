@@ -1,0 +1,13 @@
+.reservation {
+  text-align: center;
+}
+
+.reservation__title {
+  @include font-h;
+
+  font-size: 21px;
+}
+
+.reservation__description {
+  @include font-p;
+}
