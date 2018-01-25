@@ -1,5 +1,3 @@
-@import "variables";
-
 .features {
   text-align: center;
 }
@@ -23,7 +21,10 @@
 
 .features__item {
   background-color: $color-bg-light-2;
+
   &--darkbg {
+    color: $color-h-light;
+
     background-color: $color-bg-dark;
   }
 }
@@ -31,27 +32,19 @@
 .features__title {
   @include font-h;
 
-  &--darkbg {
-    color: $color-h-light;
-  }
+  color: inherit;
 }
 
 .features__number {
   @include font-p;
 
   line-height: 21px;
-
-  &--darkbg {
-    color: $color-p-light;
-  }
+  color: inherit;
 }
 
 .features__description {
   @include font-p;
 
   line-height: 21px;
-
-  &--darkbg {
-    color: $color-p-light;
-  }
+  color: inherit;
 }
