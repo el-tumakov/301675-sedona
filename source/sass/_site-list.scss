@@ -1,9 +1,15 @@
 .site-list {
-  display: none;
   margin: 0;
   padding: 0;
 
+  list-style: none;
   background-color: $color-bg-dark;
+}
+
+@media (min-width: $width-tablet) {
+  .site-list {
+    display: flex;
+  }
 }
 
 .site-list__item {

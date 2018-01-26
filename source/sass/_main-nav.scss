@@ -1,14 +1,26 @@
 .main-nav {
-  width: 320px;
-  height: 223px;
+  position: relative;
+
+  order: -1;
 }
 
-.main-nav__toggle {
+.main-nav__menu-exit {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+
   width: 23px;
-  height: 21px;
+  height: 22px;
   padding: 0;
 
   border: 0;
   background-color: transparent;
   background-image: url("../img/icon-menu.svg");
+}
+
+
+@media (min-width: $width-tablet) {
+  .main-nav__menu-exit {
+    display: none;
+  }
 }
