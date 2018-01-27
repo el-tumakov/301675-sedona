@@ -19,6 +19,50 @@
   list-style: none;
 }
 
+@media (min-width: $width-tablet) {
+  .gallery__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 648px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .gallery__list {
+    width: 100%;
+  }
+}
+
+@media (min-width: $width-tablet) {
+  .gallery__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 324px;
+
+    &--wide {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .gallery__item {
+    width: 400px;
+
+    &--wide {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: $width-tablet) {
+  .gallery__image {
+    width: 100%;
+  }
+}
+
 .gallery__image-title {
   @include font-h;
 
