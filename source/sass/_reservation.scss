@@ -11,3 +11,7 @@
 .reservation__description {
   @include font-p;
 }
+
+.reservation__button {
+  margin: 0 auto;
+}
