@@ -45,14 +45,14 @@
               <input class="review-form__input" type="text" name="patronymic" placeholder="Александрович">
             </label>
           </fieldset>
-          <fieldset class="review-form__fieldset">
+          <fieldset class="review-form__fieldset review-form__fieldset--wide">
             <legend class="review-form__title">Контактная информация:</legend>
             <label class="review-form__label review-form__label--phone" for="phone">Контактный телефон*:</label>
             <input class="review-form__input" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
             <label class="review-form__label review-form__label--email" for="email">Электронная почта*:</label>
             <input class="review-form__input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
           </fieldset>
-          <fieldset class="review-form__fieldset">
+          <fieldset class="review-form__fieldset review-form__fieldset--impression">
             <legend class="review-form__title">Ваше общее впечатление:</legend>
             <label class="review-form__label--bold">
               <input class="review-form__input" type="radio" name="impression" value="positive" checked>
@@ -67,7 +67,7 @@
               Затрудняюсь ответить
             </label>
           </fieldset>
-          <fieldset class="review-form__fieldset">
+          <fieldset class="review-form__fieldset review-form__fieldset--wide">
             <legend class="review-form__title">Посещенные достопримечательности:</legend>
             <label class="review-form__label--bold">
               <input class="review-form__input" type="checkbox" name="bridge" value="bridge" checked>
@@ -86,12 +86,13 @@
               Красные скалы
             </label>
           </fieldset>
-          <fieldset class="review-form__fieldset">
+          <fieldset class="review-form__fieldset review-form__fieldset--wide">
             <legend class="review-form__title">Опишите свои эмоции:</legend>
             <label class="visually-hidden" for="emotion">Поле ввода текста</label>
             <textarea class="review-form__input" type="textarrea" name="emotion" id="emotion" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
           <button class="review-form__button button">Отправить отзыв</button>
+          <p class="review-form__text">* — обязательные поля</p>
         </form>
       </section>
     </main>
