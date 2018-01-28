@@ -16,6 +16,6 @@ input[type="radio"].visually-hidden {
 
   border: 0;
 
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  // -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
 }
