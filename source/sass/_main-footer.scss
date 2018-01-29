@@ -1,7 +1,22 @@
 .main-footer {
   width: 320px;
+  margin: 0 auto;
 
   text-align: center;
+}
+
+@media (min-width: $width-tablet) {
+  .main-footer {
+    display: flex;
+    justify-content: space-around;
+    width: 768px;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .main-footer {
+    width: 1200px;
+  }
 }
 
 .main-footer__hashtag {

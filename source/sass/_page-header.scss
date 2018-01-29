@@ -1,15 +1,120 @@
 .page-header {
-  width: 320px;
+  display: flex;
+  flex-direction: column;
+  width: $width-mobile;
+  margin: 0 auto;
+}
+
+@media (min-width: $width-tablet) {
+  .page-header {
+    width: $width-tablet;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .page-header {
+    width: $width-desktop;
+  }
+}
+
+.page-header__wrapper {
+  position: relative;
+
+  display: flex;
   min-height: 445px;
 
   background-color: #ffffff;
   background-image: url("../img/text-sedona-index.svg"), url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
+  background-position: 19px 146px, -224px 56px;
   background-size: 280px 213px, 768px 389px;
 
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 56px;
+
+    background-color: #ffffff;
+  }
+
   &--inner-page {
+    min-height: 215px;
+
     background-image: url("../img/text-sedona.svg"), url("../img/bg-back-mobile@1x.jpg");
     background-repeat: no-repeat, no-repeat;
+    background-position: 45px 108px, -224px -175px;
     background-size: 229px 39px, 768px 389px;
+  }
+}
+
+@media (min-width: $width-tablet) {
+  .page-header__wrapper {
+    align-items: flex-start;
+    min-height: 518px;
+
+    background-position: 154px 77px, 0 0;
+    background-size: 460px 350px, 1200px 518px;
+
+    &::before {
+      display: none;
+    }
+
+    &--inner-page {
+      min-height: 290px;
+
+      background-position: 156px 95px, 0 0;
+      background-size: 458px 78px, 1200px 518px;
+    }
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .page-header__wrapper {
+    background-position: 370px 78px, 0 0;
+
+    &--inner-page {
+      min-height: 301px;
+
+      background-position: 369px 102px, 0 0;
+      background-size: 460px 79px, 1200px 518px;
+    }
+  }
+}
+
+.page-header__logo {
+  z-index: 1;
+
+  margin-right: 65px;
+  margin-left: auto;
+}
+
+@media (min-width: $width-tablet) {
+  .page-header__logo {
+    margin-top: -40px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.page-header__menu-enter {
+  z-index: 1;
+
+  width: 23px;
+  height: 21px;
+  margin-top: 17px;
+  margin-right: 20px;
+  padding: 0;
+
+  border: 0;
+  background-color: transparent;
+  background-image: url("../img/icon-menu.svg");
+}
+
+@media (min-width: $width-tablet) {
+  .page-header__menu-enter {
+    display: none;
   }
 }

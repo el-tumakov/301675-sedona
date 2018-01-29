@@ -1,5 +1,18 @@
 .page-main {
-  width: 320px;
+  width: $width-mobile;
+  margin: 0 auto;
 
   background-color: $color-bg-light;
+}
+
+@media (min-width: $width-tablet) {
+  .page-main {
+    width: $width-tablet;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .page-main {
+    width: $width-desktop;
+  }
 }

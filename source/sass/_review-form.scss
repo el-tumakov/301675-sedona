@@ -2,6 +2,14 @@
   text-align: left;
 }
 
+@media (min-width: $width-tablet) {
+  .review-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
 .review-form__fieldset {
   display: flex;
   margin: 0;
@@ -10,8 +18,24 @@
   border: 0;
 }
 
+@media (min-width: $width-tablet) {
+  .review-form__fieldset {
+    width: 324px;
+
+    &--impression {
+      order: -1;
+    }
+
+    &--wide {
+      width: 100%;
+    }
+  }
+}
+
 .review-form__title {
   @include font-h;
+
+  padding: 0;
 
   text-align: center;
 }
@@ -45,4 +69,10 @@
   padding: 0;
 
   border: 0;
+}
+
+@media (max-width: $width-tablet) {
+  .review-form__text {
+    display: none;
+  }
 }

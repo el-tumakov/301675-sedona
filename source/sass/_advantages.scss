@@ -5,6 +5,12 @@
   background-color: $color-bg-light;
 }
 
+@media (min-width: $width-tablet) {
+  .advantages__list {
+    display: flex;
+  }
+}
+
 .advantages__title {
   @include font-h;
 }

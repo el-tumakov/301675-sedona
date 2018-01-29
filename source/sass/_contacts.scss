@@ -1,0 +1,11 @@
+@media (min-width: $width-tablet) {
+  .contacts__map {
+    width: 768px;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .contacts__map {
+    width: 1200px;
+  }
+}
