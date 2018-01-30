@@ -43,6 +43,10 @@
   color: $color-h-light;
   text-decoration: none;
   text-align: center;
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @media (min-width: $width-tablet) {

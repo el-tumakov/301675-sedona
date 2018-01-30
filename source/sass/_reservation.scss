@@ -1,4 +1,6 @@
 .reservation {
+  margin-top: 28px;
+
   text-align: center;
 }
 
@@ -10,8 +12,11 @@
 
 .reservation__description {
   @include font-p;
+
+  width: 275px;
+  margin: 20px auto;
 }
 
 .reservation__button {
-  margin: 0 auto;
+  margin: 33px auto 49px;
 }

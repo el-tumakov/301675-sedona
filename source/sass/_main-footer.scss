@@ -1,8 +1,21 @@
 .main-footer {
   width: 320px;
   margin: 0 auto;
+  margin-top: 32px;
 
   text-align: center;
+}
+
+.main-footer__social {
+  margin: 0 auto;
+  margin-top: 36px;
+}
+
+.main-footer__copyright {
+  margin-top: 43px;
+  margin-left: 96px;
+
+  text-align: left;
 }
 
 @media (min-width: $width-tablet) {

@@ -1,3 +1,20 @@
+.contacts__map-wrapper {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 161px;
+    left: 146px;
+
+    width: 27px;
+    height: 27px;
+
+    background-image: url("../img/icon-map-marker.svg");
+  }
+}
+
 @media (min-width: $width-tablet) {
   .contacts__map {
     width: 768px;
