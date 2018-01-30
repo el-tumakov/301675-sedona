@@ -1,4 +1,7 @@
 .video {
+  margin-top: 33px;
+  margin-bottom: 75px;
+
   text-align: center;
 }
 
@@ -8,4 +11,68 @@
 
 .video__description {
   @include font-p;
+
+  width: 250px;
+  margin: 26px auto;
+}
+
+.video__wrapper {
+  position: relative;
+
+  min-height: 267px;
+  margin-top: 35px;
+}
+
+.video__controls {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+
+  width: 280px;
+  height: 111px;
+}
+
+.video__scroll {
+  position: relative;
+
+  height: 45px;
+
+  background-color: rgba(0, 0, 0, 0.6);
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 22px;
+    left: 22px;
+
+    width: 235px;
+    height: 3px;
+
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 19px;
+    left: 58px;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+}
+
+.video__buttons {
+  height: 66px;
+
+  background: url("../img/icon-video-replay.svg") 25px 22px no-repeat,
+  url("../img/icon-video-subtitles.svg") 174px 23px no-repeat,
+  url("../img/icon-video-fullscreen.svg") 237px 23px no-repeat;
+  background-color: #f2f2f2;
+  background-size: 16px 20px, 32px 20px, 20px 20px;
 }

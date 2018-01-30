@@ -1,22 +1,91 @@
 .gallery {
+  margin-top: 37px;
+
   text-align: center;
 }
 
 .gallery__title {
   @include font-h;
+
+  margin-bottom: 26px;
 }
 
 .gallery__intro {
   @include font-p;
+
+  width: 270px;
+  margin: 22px auto;
 }
 
 .gallery__list {
   margin: 0;
   padding: 0;
-
-  text-align: left;
+  padding-top: 5px;
 
   list-style: none;
+}
+
+.gallery__item {
+  min-height: 391px;
+  padding-top: 23px;
+
+  border-top: 1px solid #e5e5e5;
+
+  &:last-child {
+    border-bottom: 1px solid #e5e5e5;
+  }
+}
+
+.gallery__text-wrapper {
+  margin-left: 20px;
+
+  text-align: left;
+}
+
+.gallery__image-title {
+  @include font-h;
+
+  margin: 11px 0 0;
+
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.gallery__author {
+  @include font-p;
+
+  margin: 0;
+
+  text-transform: none;
+}
+
+.gallery__likes {
+  @include font-h;
+
+  position: relative;
+
+  margin-top: 9px;
+  margin-bottom: 0;
+  margin-left: 20px;
+  padding-left: 36px;
+
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -2px;
+    left: 0;
+
+    width: 24px;
+    height: 22px;
+
+    background-image: url("../img/icon-like.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 @media (min-width: $width-tablet) {
@@ -26,15 +95,7 @@
     width: 648px;
     margin: 0 auto;
   }
-}
 
-@media (min-width: $width-desktop) {
-  .gallery__list {
-    width: 100%;
-  }
-}
-
-@media (min-width: $width-tablet) {
   .gallery__item {
     display: flex;
     flex-wrap: wrap;
@@ -45,9 +106,17 @@
       width: 100%;
     }
   }
+
+  .gallery__image {
+    width: 100%;
+  }
 }
 
 @media (min-width: $width-desktop) {
+  .gallery__list {
+    width: 100%;
+  }
+
   .gallery__item {
     width: 400px;
 
@@ -55,30 +124,4 @@
       width: 100%;
     }
   }
-}
-
-@media (min-width: $width-tablet) {
-  .gallery__image {
-    width: 100%;
-  }
-}
-
-.gallery__image-title {
-  @include font-h;
-
-  font-size: 14px;
-  line-height: 24px;
-}
-
-.gallery__author {
-  @include font-p;
-
-  text-transform: none;
-}
-
-.gallery__likes {
-  @include font-h;
-
-  font-size: 14px;
-  line-height: 24px;
 }
