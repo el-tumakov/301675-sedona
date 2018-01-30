@@ -1,19 +1,47 @@
 .page-header {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   width: $width-mobile;
   margin: 0 auto;
-}
 
-@media (min-width: $width-tablet) {
-  .page-header {
-    width: $width-tablet;
+  &::before {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 160px;
+    height: 26px;
+
+    background-image: linear-gradient(
+    9deg,
+    #ffffff 0%,
+    #ffffff 49%,
+    transparent 51%,
+    transparent 100%);
   }
-}
 
-@media (min-width: $width-desktop) {
-  .page-header {
-    width: $width-desktop;
+  &::after {
+    content: "";
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    width: 160px;
+    height: 26px;
+
+    background-image: linear-gradient(
+    -9deg,
+    #ffffff 0%,
+    #ffffff 49%,
+    transparent 51%,
+    transparent 100%);
   }
 }
 
@@ -26,7 +54,7 @@
   background-color: #ffffff;
   background-image: url("../img/text-sedona-index.svg"), url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-position: 19px 146px, -224px 56px;
+  background-position: 20px 146px, -224px 56px;
   background-size: 280px 213px, 768px 389px;
 
   &::before {
@@ -50,7 +78,17 @@
   }
 }
 
+.page-header__logo {
+  z-index: 1;
+
+  margin: 0 110px;
+}
+
 @media (min-width: $width-tablet) {
+  .page-header {
+    width: $width-tablet;
+  }
+
   .page-header__wrapper {
     align-items: flex-start;
     min-height: 518px;
@@ -69,9 +107,23 @@
       background-size: 458px 78px, 1200px 518px;
     }
   }
+
+  .page-header__logo {
+    margin-top: -40px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .page-header__menu-enter {
+    display: none;
+  }
 }
 
 @media (min-width: $width-desktop) {
+  .page-header {
+    width: $width-desktop;
+  }
+
   .page-header__wrapper {
     background-position: 370px 78px, 0 0;
 
@@ -81,40 +133,5 @@
       background-position: 369px 102px, 0 0;
       background-size: 460px 79px, 1200px 518px;
     }
-  }
-}
-
-.page-header__logo {
-  z-index: 1;
-
-  margin-right: 65px;
-  margin-left: auto;
-}
-
-@media (min-width: $width-tablet) {
-  .page-header__logo {
-    margin-top: -40px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-.page-header__menu-enter {
-  z-index: 1;
-
-  width: 23px;
-  height: 21px;
-  margin-top: 17px;
-  margin-right: 20px;
-  padding: 0;
-
-  border: 0;
-  background-color: transparent;
-  background-image: url("../img/icon-menu.svg");
-}
-
-@media (min-width: $width-tablet) {
-  .page-header__menu-enter {
-    display: none;
   }
 }
