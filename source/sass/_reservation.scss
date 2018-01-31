@@ -20,3 +20,27 @@
 .reservation__button {
   margin: 33px auto 49px;
 }
+
+@media (min-width: $width-tablet) {
+  .reservation {
+    margin-top: 54px;
+  }
+
+  .reservation__title {
+    font-size: 30px;
+  }
+
+  .reservation__description {
+    width: 458px;
+
+    &--whitespace {
+      white-space: pre;
+    }
+  }
+
+  .reservation__button {
+    width: 458px;
+    margin: 0 auto;
+    margin-top: 43px;
+  }
+}

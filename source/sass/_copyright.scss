@@ -1,11 +1,17 @@
-.copyright__link {
+.copyright {
+  display: flex;
+  align-items: center;
+}
+
+.copyright__text {
   position: relative;
+  top: -4px;
 }
 
 .copyright__image {
-  position: absolute;
-  top: -7px;
-  right: -39px;
+  position: static;
+
+  margin-left: 14px;
 
   &:hover {
     fill: #81b3d2;

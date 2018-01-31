@@ -16,6 +16,10 @@
 }
 
 @media (min-width: $width-tablet) {
+  .contacts {
+    margin-top: 58px;
+  }
+
   .contacts__map {
     width: 768px;
   }

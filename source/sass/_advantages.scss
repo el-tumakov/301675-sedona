@@ -67,5 +67,59 @@
 @media (min-width: $width-tablet) {
   .advantages__list {
     display: flex;
+    padding: 0;
+
+    text-align: center;
+  }
+
+  .advantages__item {
+    width: 256px;
+    min-height: 330px;
+    padding: 0;
+
+    &--gift {
+      order: 1;
+    }
+
+    &::before {
+      width: 77px;
+      height: 75px;
+    }
+
+    &--house::before {
+      top: 60px;
+      left: 90px;
+
+      background-size: 75px 72px;
+    }
+
+    &--gift::before {
+      top: 57px;
+      left: 95px;
+
+      background-size: 64px 75px;
+    }
+
+    &--food::before {
+      top: 63px;
+      left: 89px;
+
+      background-size: 77px 68px;
+    }
+  }
+
+  .advantages__title {
+    margin-top: 159px;
+
+    font-size: 21px;
+  }
+
+  .advantages__description {
+    width: 165px;
+    margin: 21px auto;
+
+    &--short {
+      width: 155px;
+    }
   }
 }
