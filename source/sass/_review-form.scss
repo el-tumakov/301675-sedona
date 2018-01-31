@@ -81,6 +81,15 @@
   }
 }
 
+.review-form__attraction-column {
+  display: flex;
+  flex-wrap: wrap;
+
+  &:not(:last-child) {
+    margin-bottom: 34px;
+  }
+}
+
 .review-form__fieldset-wrap--emotion {
   padding-bottom: 25px;
 
@@ -303,17 +312,166 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 57px;
   }
 
   .review-form__fieldset {
     width: 324px;
+    padding: 0;
+
+    border: 0;
 
     &--impression {
       order: -1;
     }
+  }
 
-    &--wide {
-      width: 100%;
+  .review-form__fieldset--wide {
+    width: 100%;
+
+    .review-form__title {
+      width: 380px;
+      margin: 0 134px;
+
+      text-align: center;
     }
+  }
+
+  .review-form__fieldset-wrap {
+    padding: 0;
+  }
+
+  .review-form__fieldset-wrap--name {
+    margin-top: 17px;
+    margin-left: 58px;
+    padding: 0;
+
+    .review-form__label {
+      margin-top: 0;
+    }
+
+    .review-form__label:not(:last-of-type) {
+      margin-bottom: 34px;
+    }
+  }
+
+  .review-form__fieldset-wrap--impression {
+    margin-top: 17px;
+    padding: 0;
+
+    border-right: 1px solid #dbdbdb;
+
+    .review-form__title {
+      margin-bottom: 73px;
+    }
+
+    .review-form__label {
+      margin-top: 0;
+      padding-left: 76px;
+    }
+
+    .review-form__label:not(:last-of-type) {
+      margin-bottom: 33px;
+    }
+  }
+
+  .review-form__fieldset-wrap--contacts {
+    margin-top: 67px;
+
+    .review-form__title {
+      margin-bottom: 11px;
+    }
+
+    .review-form__label {
+      width: 100%;
+      margin-bottom: 7px;
+    }
+
+    .review-form__input-wrap {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .review-form__input {
+      width: 558px;
+    }
+  }
+
+  .review-form__fieldset-wrap--attraction {
+    justify-content: center;
+    margin-top: 43px;
+
+    .review-form__title {
+      margin-bottom: 56px;
+    }
+
+    .review-form__label {
+      margin-bottom: 42px;
+    }
+
+    .review-form__label:not(:last-child) {
+      margin-bottom: 42px;
+    }
+  }
+
+  .review-form__attraction-column {
+    width: 228px;
+    margin-left: 31px;
+
+    .review-form__label:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .review-form__fieldset-wrap--emotion {
+    margin-top: 30px;
+
+    .review-form__title {
+      margin-bottom: 57px;
+    }
+  }
+
+  .review-form__title {
+    margin-bottom: 56px;
+
+    font-size: 21px;
+    text-align: left;
+  }
+
+  .review-form__textarea {
+    width: 616px;
+  }
+
+  .review-form__input {
+    &--name {
+      width: 184px;
+    }
+
+    &--surname {
+      width: 146px;
+    }
+
+    &--patronymic {
+      width: 148px;
+    }
+  }
+
+  .review-form__footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    margin-top: 58px;
+    margin-bottom: 65px;
+  }
+
+  .review-form__button {
+    width: 324px;
+    margin: 0;
+  }
+
+  .review-form__text {
+    @include font-p;
   }
 }

@@ -68,14 +68,18 @@
           <fieldset class="review-form__fieldset review-form__fieldset--wide">
             <div class="review-form__fieldset-wrap review-form__fieldset-wrap--attraction">
               <legend class="review-form__title">Посещенные достопримечательности:</legend>
-              <input class="visually-hidden review-form__input-checkbox" type="checkbox" id="bridge" name="bridge" value="bridge" checked>
-              <label class="review-form__label review-form__label--bold review-form__label--checkbox" for="bridge">Мост Дьявола</label>
-              <input class="visually-hidden review-form__input-checkbox" type="checkbox" id="park" name="park" value="park" checked>
-              <label class="review-form__label review-form__label--bold review-form__label--checkbox" for="park">Слайд-парк</label>
-              <input class="visually-hidden review-form__input-checkbox" type="checkbox" id="mountain" name="mountain" value="mountain">
-              <label class="review-form__label review-form__label--bold review-form__label--checkbox" for="mountain">Гора-Колокол</label>
-              <input class="visually-hidden review-form__input-checkbox" type="checkbox" id="rock" name="rock" value="rock" checked>
-              <label class="review-form__label review-form__label--bold review-form__label--checkbox" for="rock">Красные скалы</label>
+              <div class="review-form__attraction-column">
+                <input class="visually-hidden review-form__input-checkbox" type="checkbox" id="bridge" name="bridge" value="bridge" checked>
+                <label class="review-form__label review-form__label--bold review-form__label--checkbox" for="bridge">Мост Дьявола</label>
+                <input class="visually-hidden review-form__input-checkbox" type="checkbox" id="park" name="park" value="park" checked>
+                <label class="review-form__label review-form__label--bold review-form__label--checkbox" for="park">Слайд-парк</label>
+              </div>
+              <div class="review-form__attraction-column">
+                <input class="visually-hidden review-form__input-checkbox" type="checkbox" id="mountain" name="mountain" value="mountain">
+                <label class="review-form__label review-form__label--bold review-form__label--checkbox" for="mountain">Гора-Колокол</label>
+                <input class="visually-hidden review-form__input-checkbox" type="checkbox" id="rock" name="rock" value="rock" checked>
+                <label class="review-form__label review-form__label--bold review-form__label--checkbox" for="rock">Красные скалы</label>
+              </div>
             </div>
           </fieldset>
           <fieldset class="review-form__fieldset review-form__fieldset--wide">
@@ -85,8 +89,10 @@
               <textarea class="review-form__input review-form__textarea" name="emotion" id="emotion" placeholder="Опишите подробно все свои восторги"></textarea>
             </div>
           </fieldset>
-          <button class="review-form__button button">Отправить отзыв</button>
-          <p class="review-form__text">* — обязательные поля</p>
+          <div class="review-form__footer">
+            <button class="review-form__button button">Отправить отзыв</button>
+            <p class="review-form__text">* &#150; обязательные поля</p>
+          </div>
         </form>
       </section>
     </main>
