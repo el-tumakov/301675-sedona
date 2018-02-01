@@ -44,7 +44,7 @@
           <fieldset class="review-form__fieldset review-form__fieldset--wide">
             <div class="review-form__fieldset-wrap review-form__fieldset-wrap--contacts">
               <legend class="review-form__title">Контактная информация:</legend>
-              <label class="review-form__label review-form__label--phone" for="phone">Контактный телефон*:</label>
+              <label class="review-form__label review-form__label--phone" for="phone"><span class="review-form__hidden-phone">Контактный </span>телефон*:</label>
               <div class="review-form__input-wrap review-form__input-wrap--phone">
                 <input class="review-form__input review-form__input--phone" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
               </div>
@@ -68,17 +68,23 @@
           <fieldset class="review-form__fieldset review-form__fieldset--wide">
             <div class="review-form__fieldset-wrap review-form__fieldset-wrap--attraction">
               <legend class="review-form__title">Посещенные достопримечательности:</legend>
-              <div class="review-form__attraction-column">
-                <input class="visually-hidden review-form__input-checkbox" type="checkbox" id="bridge" name="bridge" value="bridge" checked>
-                <label class="review-form__label review-form__label--bold review-form__label--checkbox" for="bridge">Мост Дьявола</label>
-                <input class="visually-hidden review-form__input-checkbox" type="checkbox" id="park" name="park" value="park" checked>
-                <label class="review-form__label review-form__label--bold review-form__label--checkbox" for="park">Слайд-парк</label>
-              </div>
-              <div class="review-form__attraction-column">
-                <input class="visually-hidden review-form__input-checkbox" type="checkbox" id="mountain" name="mountain" value="mountain">
-                <label class="review-form__label review-form__label--bold review-form__label--checkbox" for="mountain">Гора-Колокол</label>
-                <input class="visually-hidden review-form__input-checkbox" type="checkbox" id="rock" name="rock" value="rock" checked>
-                <label class="review-form__label review-form__label--bold review-form__label--checkbox" for="rock">Красные скалы</label>
+              <div class="review-form__attraction-wrap">
+                <div class="review-form__attraction-item review-form__attraction-item--bridge">
+                  <input class="visually-hidden review-form__input-checkbox" type="checkbox" id="bridge" name="bridge" value="bridge" checked>
+                  <label class="review-form__label review-form__label--bold review-form__label--checkbox" for="bridge">Мост Дьявола</label>
+                </div>
+                <div class="review-form__attraction-item review-form__attraction-item--park">
+                  <input class="visually-hidden review-form__input-checkbox" type="checkbox" id="park" name="park" value="park" checked>
+                  <label class="review-form__label review-form__label--bold review-form__label--checkbox" for="park">Слайд-парк</label>
+                </div>
+                <div class="review-form__attraction-item review-form__attraction-item--mountain">
+                  <input class="visually-hidden review-form__input-checkbox" type="checkbox" id="mountain" name="mountain" value="mountain">
+                  <label class="review-form__label review-form__label--bold review-form__label--checkbox" for="mountain">Гора-Колокол</label>
+                </div>
+                <div class="review-form__attraction-item review-form__attraction-item--rock">
+                  <input class="visually-hidden review-form__input-checkbox" type="checkbox" id="rock" name="rock" value="rock" checked>
+                  <label class="review-form__label review-form__label--bold review-form__label--checkbox" for="rock">Красные скалы</label>
+                </div>
               </div>
             </div>
           </fieldset>
