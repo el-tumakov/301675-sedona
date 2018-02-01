@@ -185,3 +185,27 @@
     fill: #ffffff;
   }
 }
+
+@media (min-width: $width-desktop) {
+  .video {
+    margin-top: 70px;
+    margin-bottom: 111px;
+  }
+
+  .video__film {
+    width: 800px;
+    height: 500px;
+  }
+
+  .video__controls {
+    width: 800px;
+    left: 199px;
+    bottom: 3px;
+  }
+
+  .video__scroll {
+    &::before {
+      width: 540px;
+    }
+  }
+}
