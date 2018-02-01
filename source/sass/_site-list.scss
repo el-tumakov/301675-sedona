@@ -125,3 +125,20 @@
     }
   }
 }
+
+@media (min-width: $width-desktop) {
+  .site-list {
+    padding-right: 71px;
+    padding-left: 91px;
+  }
+
+  .site-list__item {
+    &--gallery {
+      margin-left: 161px;
+    }
+
+    &--form {
+      margin-right: 137px;
+    }
+  }
+}

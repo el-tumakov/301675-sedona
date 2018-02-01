@@ -238,4 +238,32 @@
   .features__image {
     width: 800px;
   }
+
+  .features__item--darkbg {
+    .features__title {
+      margin-top: 23px;
+    }
+
+    .features__description {
+      width: 235px;
+    }
+  }
+
+  .features__item--first {
+    .features__description {
+      width: 270px;
+    }
+  }
+
+  .features__item--grey {
+    min-height: 256px;
+  }
+
+  .features__description {
+    width: 290px;
+
+    &--short {
+      width: 270px;
+    }
+  }
 }

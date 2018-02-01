@@ -123,3 +123,29 @@
     }
   }
 }
+
+@media (min-width: $width-desktop) {
+  .advantages__item {
+    width: 400px;
+
+    &--house::before {
+      left: 161px;
+    }
+
+    &--food::before {
+      left: 161px;
+    }
+
+    &--gift::before {
+      left: 167px;
+    }
+  }
+
+  .advantages__description {
+    width: 270px;
+
+    &--short {
+      width: 290px;
+    }
+  }
+}

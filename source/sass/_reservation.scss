@@ -44,3 +44,13 @@
     margin-top: 43px;
   }
 }
+
+@media (min-width: $width-desktop) {
+  .reservation {
+    margin-top: 56px;
+  }
+
+  .reservation__button {
+    margin-top: 47px;
+  }
+}

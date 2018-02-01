@@ -28,6 +28,10 @@
 }
 
 @media (min-width: $width-desktop) {
+  .contacts {
+    margin-top: 66px;
+  }
+
   .contacts__map {
     width: 1200px;
   }
