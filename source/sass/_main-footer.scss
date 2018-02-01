@@ -12,9 +12,12 @@
 }
 
 .main-footer__copyright {
+  @include font-p;
+
   margin-top: 34px;
   margin-left: 96px;
 
+  line-height: 26px;
   text-align: left;
 }
 
@@ -22,12 +25,6 @@
   @include font-h;
 
   font-size: 21px;
-  line-height: 26px;
-}
-
-.main-footer__copyright {
-  @include font-p;
-
   line-height: 26px;
 }
 

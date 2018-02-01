@@ -24,11 +24,11 @@
   }
 
   &:hover {
-    background-color: #669ec0;
+    background-color: $color-menu-hover;
   }
 
   &:active {
-    background-color: #5496bd;
+    background-color: $color-menu-active;
   }
 }
 
@@ -45,7 +45,7 @@
   text-align: center;
 
   &:active {
-    color: rgba(255, 255, 255, 0.3);
+    color: $color-link-mobile-active;
   }
 }
 
@@ -105,19 +105,19 @@
     text-align: left;
 
     &:hover {
-      color: #81b3d2;
+      color: $color-link-hover;
     }
 
     &:active {
-      color: #b2b2b2;
+      color: $color-link-active;
     }
 
     &--active {
-      color: #766357;
+      color: $color-link-curent;
     }
 
     &--active:hover {
-      color: #604e43;
+      color: $color-link-curent-hover;
     }
 
     &--active:active {

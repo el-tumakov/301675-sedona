@@ -8,7 +8,7 @@
   padding: 0 20px;
 
   border: 0;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid $color-line-2;
 }
 
 .review-form__fieldset-wrap {
@@ -136,15 +136,15 @@
     height: 56px;
 
     border-radius: 50%;
-    background-color: #f2f2f2;
+    background-color: $color-bg-checkbox;
   }
 
   &:hover::before {
-    background-color: #e5e5e5;
+    background-color: $color-bg-checkbox-hover;
   }
 
   &:active::before {
-    background-color: #d5d5d5;
+    background-color: $color-bg-checkbox-active;
   }
 
   &:active::after {
@@ -164,7 +164,7 @@
   height: 22px;
 
   border-radius: 50%;
-  background-color: #333333;
+  background-color: $color-bg-checkbox-circle;
 }
 
 .review-form__label--checkbox {
@@ -181,15 +181,15 @@
     height: 56px;
 
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: $color-bg-checkbox;
   }
 
   &:hover::before {
-    background-color: #e5e5e5;
+    background-color: $color-bg-checkbox-hover;
   }
 
   &:active::before {
-    background-color: #d5d5d5;
+    background-color: $color-bg-checkbox-active;
   }
 
   &:active::after {
@@ -208,8 +208,8 @@
   width: 18px;
   height: 10px;
 
-  border-bottom: 3px solid #231f20;
-  border-left: 3px solid #231f20;
+  border-bottom: 3px solid $color-bg-checkbox-daw;
+  border-left: 3px solid $color-bg-checkbox-daw;
 
   transform: rotate(-45deg);
 }
@@ -263,14 +263,14 @@
   }
 
   &:hover {
-    background-color: #e5e5e5;
+    background-color: $color-input-hover;
   }
 
   &:active,
   &:focus {
     outline: 0;
-    background-color: #ffffff;
-    box-shadow: inset 0 0 0 4px #e5e5e5;
+    background-color: $color-bg-light;
+    box-shadow: inset 0 0 0 4px $color-input-hover;
   }
 
   &--name {
@@ -331,10 +331,35 @@
     width: 100%;
 
     .review-form__title {
-      width: 380px;
-      margin: 0 134px;
-
       text-align: center;
+    }
+  }
+
+  .review-form__title--wide {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 120px;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      width: 125px;
+      height: 1px;
+      top: 48%;
+
+      background-color: $color-line-3;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
     }
   }
 
@@ -374,7 +399,7 @@
     margin-top: 17px;
     padding: 0;
 
-    border-right: 1px solid #dbdbdb;
+    border-right: 1px solid $color-line-3;
 
     .review-form__title {
       margin-bottom: 73px;
@@ -498,9 +523,14 @@
     width: 100%;
 
     .review-form__title {
-      width: 100%;
-      margin: 0 auto;
       padding: 0 290px;
+    }
+  }
+
+  .review-form__title--wide {
+    &::before,
+    &::after {
+      width: 279px;
     }
   }
 

@@ -15,11 +15,11 @@
   background-color: $color-bg-dark;
 
   &:hover {
-    background-color: #669ec0;
+    background-color: $color-menu-hover;
   }
 
   &:active {
-    background-color: #5496bd;
+    background-color: $color-menu-active;
   }
 }
 

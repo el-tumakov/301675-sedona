@@ -39,7 +39,7 @@
 
   height: 45px;
 
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: $color-bg-video-controls;
 
   &::before {
     content: "";
@@ -65,7 +65,7 @@
     height: 9px;
 
     border-radius: 50%;
-    background-color: #ffffff;
+    background-color: $color-p-light;
   }
 }
 
@@ -103,13 +103,13 @@
 
 .video__icon {
   &:hover {
-    fill: #333333;
+    fill: $color-p-dark;
   }
 
   &:active {
     opacity: 0.3;
 
-    fill: #333333;
+    fill: $color-p-dark;
   }
 }
 
@@ -146,7 +146,7 @@
     width: 648px;
     height: 93px;
 
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: $color-bg-video-controls;
   }
 
   .video__scroll {
@@ -182,7 +182,7 @@
   }
 
   .video__icon {
-    fill: #ffffff;
+    fill: $color-p-light;
   }
 }
 

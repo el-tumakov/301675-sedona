@@ -29,10 +29,10 @@
   min-height: 391px;
   padding-top: 23px;
 
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid $color-line-2;
 
   &:last-child {
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid $color-line-2;
   }
 }
 
@@ -141,10 +141,10 @@
     min-height: 80px;
     padding: 0 20px;
 
-    background-color: #f2f2f2;
+    background-color: $color-gallery-light;
 
     &--dark {
-      background-color: #eaeaea;
+      background-color: $color-gallery-dark;
     }
   }
 
@@ -192,10 +192,11 @@
   .gallery__description-wrapper {
     position: absolute;
     bottom: 0;
+    left: 0;
 
     width: 360px;
 
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: $color-gallery-desktop;
   }
 
   .gallery__image-title {

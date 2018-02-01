@@ -14,10 +14,10 @@
   margin-left: 14px;
 
   &:hover {
-    fill: #81b3d2;
+    fill: $color-link-hover;
   }
 
   &:active {
-    fill: #b2b2b2;
+    fill: $color-link-active;
   }
 }
