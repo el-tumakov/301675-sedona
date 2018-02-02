@@ -1,4 +1,6 @@
 .reservation {
+  margin-top: 28px;
+
   text-align: center;
 }
 
@@ -10,8 +12,45 @@
 
 .reservation__description {
   @include font-p;
+
+  width: 275px;
+  margin: 20px auto;
 }
 
 .reservation__button {
-  margin: 0 auto;
+  margin: 33px auto 49px;
+}
+
+@media (min-width: $width-tablet) {
+  .reservation {
+    margin-top: 54px;
+  }
+
+  .reservation__title {
+    font-size: 30px;
+  }
+
+  .reservation__description {
+    width: 458px;
+
+    &--whitespace {
+      white-space: pre;
+    }
+  }
+
+  .reservation__button {
+    width: 458px;
+    margin: 0 auto;
+    margin-top: 43px;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .reservation {
+    margin-top: 56px;
+  }
+
+  .reservation__button {
+    margin-top: 47px;
+  }
 }

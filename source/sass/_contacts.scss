@@ -1,10 +1,37 @@
+.contacts__map-wrapper {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 27px;
+    height: 27px;
+    margin-top: -13.5px;
+    margin-left: -13.5px;
+
+    background-image: url("../img/icon-map-marker.svg");
+  }
+}
+
 @media (min-width: $width-tablet) {
+  .contacts {
+    margin-top: 58px;
+  }
+
   .contacts__map {
     width: 768px;
   }
 }
 
 @media (min-width: $width-desktop) {
+  .contacts {
+    margin-top: 66px;
+  }
+
   .contacts__map {
     width: 1200px;
   }

@@ -1,68 +1,133 @@
 .features {
+  margin-top: 40px;
+
   text-align: center;
+}
+
+.features__header {
+  width: 270px;
+  margin: 0 auto;
 }
 
 .features__slogan {
   @include font-h;
+
+  display: block;
+  margin: 27px 0;
 }
 
 .features__intro {
   @include font-p;
+
+  margin: 20px 0;
 
   line-height: 26px;
 }
 
 .features__list {
   margin: 0;
+  margin-top: 26px;
   padding: 0;
 
   list-style: none;
-}
-
-@media (min-width: $width-tablet) {
-  .features__list {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  background-color: $color-bg-light-2;
 }
 
 .features__item {
-  background-color: $color-bg-light-2;
+  position: relative;
 
-  &--darkbg {
+  display: flex;
+  flex-direction: column;
+
+  &--second {
+    margin-bottom: 19px;
+  }
+
+  &:last-child {
+    .features__description {
+      padding-bottom: 28px;
+    }
+  }
+}
+
+.features__item--darkbg {
+  .features__text-wrapper {
+    min-height: 162px;
+    padding-top: 29px;
+
     color: $color-h-light;
 
     background-color: $color-bg-dark;
   }
-}
 
-@media (min-width: $width-tablet) {
-  .features__item {
-    display: flex;
-    flex-wrap: wrap;
+  .features__description {
+    width: 275px;
+    padding-bottom: 40px;
   }
 }
 
-@media (min-width: $width-tablet) {
+.features__item--first {
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 160px;
+    height: 16px;
+
+    background-image: linear-gradient(5deg, transparent 0%, transparent 48%, $color-bg-light 52%, $color-bg-light 100%);
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    width: 160px;
+    height: 16px;
+
+    background-image: linear-gradient(-5deg, transparent 0%, transparent 48%, $color-bg-light 52%, $color-bg-light 100%);
+  }
+
   .features__text-wrapper {
-    width: 256px;
+    padding-top: 47px;
   }
 }
 
-@media (min-width: $width-desktop) {
-  .features__text-wrapper {
-    width: 400px;
+.features__item--line {
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -19px;
+    left: 20px;
+
+    width: 280px;
+    height: 1px;
+
+    background-color: $color-line-1;
   }
 }
 
 .features__title {
   @include font-h;
 
+  margin: 9px 0;
+
   color: inherit;
 }
 
 .features__number {
   @include font-p;
+
+  margin-top: 9px;
+  margin-bottom: 15px;
 
   line-height: 21px;
   color: inherit;
@@ -71,13 +136,93 @@
 .features__description {
   @include font-p;
 
+  width: 255px;
+  margin: 15px auto 0;
+  padding-bottom: 45px;
+
   line-height: 21px;
   color: inherit;
 }
 
 @media (min-width: $width-tablet) {
+  .features {
+    margin-top: 50px;
+  }
+
+  .features__header {
+    width: 515px;
+  }
+
+  .features__slogan {
+    font-size: 21px;
+  }
+
+  .features__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 51px;
+  }
+
+  .features__item {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+
+    &--second {
+      margin-bottom: 0;
+    }
+  }
+
+  .features__item--first {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    .features__text-wrapper {
+      padding-top: 29px;
+    }
+  }
+
+  .features__item--darkbg {
+    .features__description {
+      width: 170px;
+    }
+  }
+
+  .features__item--line {
+    &::before {
+      display: none;
+    }
+  }
+
+  .features__text-wrapper {
+    width: 256px;
+    padding-top: 29px;
+  }
+
+  .features__title {
+    width: 151px;
+    margin: 16px auto 9px;
+
+    font-size: 21px;
+  }
+
+  .features__description {
+    width: 158px;
+    margin-top: 22px;
+
+    &--short {
+      width: 140px;
+    }
+  }
+
   .features__image {
     width: 512px;
+    height: 256px;
 
     &--left {
       order: -1;
@@ -86,7 +231,39 @@
 }
 
 @media (min-width: $width-desktop) {
+  .features__text-wrapper {
+    width: 400px;
+  }
+
   .features__image {
     width: 800px;
+  }
+
+  .features__item--darkbg {
+    .features__title {
+      margin-top: 23px;
+    }
+
+    .features__description {
+      width: 235px;
+    }
+  }
+
+  .features__item--first {
+    .features__description {
+      width: 270px;
+    }
+  }
+
+  .features__item--grey {
+    min-height: 256px;
+  }
+
+  .features__description {
+    width: 290px;
+
+    &--short {
+      width: 270px;
+    }
   }
 }

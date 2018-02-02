@@ -2,39 +2,107 @@
   text-align: left;
 }
 
-@media (min-width: $width-tablet) {
-  .review-form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-}
-
 .review-form__fieldset {
   display: flex;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
 
   border: 0;
+  border-top: 1px solid $color-line-2;
 }
 
-@media (min-width: $width-tablet) {
-  .review-form__fieldset {
-    width: 324px;
+.review-form__fieldset-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  padding-top: 17px;
+}
 
-    &--impression {
-      order: -1;
-    }
+.review-form__fieldset-wrap--name {
+  padding-bottom: 25px;
 
-    &--wide {
-      width: 100%;
-    }
+  .review-form__label {
+    margin-top: 38px;
+  }
+
+  .review-form__input {
+    margin-left: auto;
+  }
+}
+
+.review-form__fieldset-wrap--contacts {
+  padding-bottom: 28px;
+
+  .review-form__title {
+    margin-bottom: 9px;
+  }
+
+  .review-form__label {
+    margin-top: 13px;
+    margin-bottom: 6px;
+    margin-left: 20px;
+  }
+
+  .review-form__input {
+    width: 190px;
+  }
+}
+
+.review-form__fieldset-wrap--impression {
+  padding-bottom: 24px;
+
+  .review-form__title {
+    margin-bottom: 14px;
+  }
+
+  .review-form__label {
+    width: 201px;
+    height: 45px;
+    margin-top: 24px;
+    padding-left: 79px;
+  }
+}
+
+.review-form__fieldset-wrap--attraction {
+  padding-bottom: 11px;
+
+  .review-form__title {
+    margin-bottom: 32px;
+  }
+
+  .review-form__label {
+    width: 202px;
+    height: 46px;
+    padding-left: 78px;
+  }
+}
+
+.review-form__attraction-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.review-form__attraction-item {
+  min-height: 56px;
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.review-form__fieldset-wrap--emotion {
+  padding-bottom: 25px;
+
+  .review-form__title {
+    margin-bottom: 18px;
   }
 }
 
 .review-form__title {
   @include font-h;
 
+  width: 100%;
   padding: 0;
 
   text-align: center;
@@ -45,6 +113,8 @@
 
   line-height: 26px;
 
+  cursor: pointer;
+
   &--bold {
     @include font-h;
 
@@ -52,8 +122,136 @@
   }
 }
 
+.review-form__label--radio {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -14px;
+    left: 0;
+
+    width: 56px;
+    height: 56px;
+
+    border-radius: 50%;
+    background-color: $color-bg-checkbox;
+  }
+
+  &:hover::before {
+    background-color: $color-bg-checkbox-hover;
+  }
+
+  &:active::before {
+    background-color: $color-bg-checkbox-active;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+.review-form__input-radio:checked + .review-form__label--radio::after,
+.review-form__input-radio:active + .review-form__label--radio::after {
+  content: "";
+
+  position: absolute;
+  top: 3px;
+  left: 17px;
+
+  width: 22px;
+  height: 22px;
+
+  border-radius: 50%;
+  background-color: $color-bg-checkbox-circle;
+}
+
+.review-form__label--checkbox {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -14px;
+    left: -1px;
+
+    width: 56px;
+    height: 56px;
+
+    border-radius: 5px;
+    background-color: $color-bg-checkbox;
+  }
+
+  &:hover::before {
+    background-color: $color-bg-checkbox-hover;
+  }
+
+  &:active::before {
+    background-color: $color-bg-checkbox-active;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+.review-form__input-checkbox:checked + .review-form__label--checkbox::after,
+.review-form__input-checkbox:active + .review-form__label--checkbox::after {
+  content: "";
+
+  position: absolute;
+  top: 4px;
+  left: 18px;
+
+  width: 18px;
+  height: 10px;
+
+  border-bottom: 3px solid $color-bg-checkbox-daw;
+  border-left: 3px solid $color-bg-checkbox-daw;
+
+  transform: rotate(-45deg);
+}
+
+.review-form__input-wrap {
+  position: relative;
+
+  width: 280px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 58px;
+    height: 58px;
+
+    background-color: #e6e6e6;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--phone::before {
+    background-image: url("../img/icon-phone.svg");
+    background-size: 18px 18px;
+  }
+
+  &--email::before {
+    background-image: url("../img/icon-mail.svg");
+    background-size: 16px 16px;
+  }
+}
+
 .review-form__input {
   @include font-h;
+
+  height: 58px;
+  padding: 0;
+  padding-right: 10px;
+  padding-left: 22px;
 
   text-transform: none;
 
@@ -63,16 +261,387 @@
   &::placeholder {
     color: $color-h-dark;
   }
+
+  &:hover {
+    background-color: $color-input-hover;
+  }
+
+  &:active,
+  &:focus {
+    outline: 0;
+    background-color: $color-bg-light;
+    box-shadow: inset 0 0 0 4px $color-input-hover;
+  }
+
+  &--name {
+    width: 198px;
+  }
+
+  &--surname {
+    width: 160px;
+  }
+
+  &--patronymic {
+    width: 162px;
+  }
+}
+
+.review-form__textarea {
+  width: 246px;
+  height: 144px;
+  padding-top: 16px;
+
+  resize: none;
 }
 
 .review-form__button {
+  height: 58px;
+  margin: 26px auto 73px;
   padding: 0;
 
   border: 0;
 }
 
-@media (max-width: $width-tablet) {
+@media (max-width: $width-tablet - 1px) {
   .review-form__text {
     display: none;
+  }
+}
+
+@media (min-width: $width-tablet) {
+  .review-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 57px;
+  }
+
+  .review-form__fieldset {
+    width: 324px;
+    padding: 0;
+
+    border: 0;
+
+    &--impression {
+      order: -1;
+    }
+  }
+
+  .review-form__fieldset--wide {
+    width: 100%;
+
+    .review-form__title {
+      text-align: center;
+    }
+  }
+
+  .review-form__title--wide {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 120px;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      width: 125px;
+      height: 1px;
+      top: 48%;
+
+      background-color: $color-line-3;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  .review-form__fieldset-wrap {
+    padding: 0;
+  }
+
+  .review-form__fieldset-wrap--name {
+    margin-top: 17px;
+    margin-left: 58px;
+    padding: 0;
+
+    .review-form__label {
+      margin-top: 0;
+    }
+
+    .review-form__label:not(:last-of-type) {
+      margin-bottom: 34px;
+    }
+  }
+
+  .review-form__input {
+    &--name {
+      width: 184px;
+    }
+
+    &--surname {
+      width: 146px;
+    }
+
+    &--patronymic {
+      width: 148px;
+    }
+  }
+
+  .review-form__fieldset-wrap--impression {
+    margin-top: 17px;
+    padding: 0;
+
+    border-right: 1px solid $color-line-3;
+
+    .review-form__title {
+      margin-bottom: 73px;
+    }
+
+    .review-form__label {
+      margin-top: 0;
+      padding-left: 76px;
+    }
+
+    .review-form__label:not(:last-of-type) {
+      margin-bottom: 33px;
+    }
+  }
+
+  .review-form__fieldset-wrap--contacts {
+    margin-top: 67px;
+
+    .review-form__title {
+      margin-bottom: 11px;
+    }
+
+    .review-form__label {
+      width: 100%;
+      margin-bottom: 7px;
+    }
+
+    .review-form__input-wrap {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .review-form__input {
+      width: 558px;
+    }
+  }
+
+  .review-form__fieldset-wrap--attraction {
+    margin-top: 43px;
+
+    .review-form__title {
+      margin-bottom: 55px;
+    }
+  }
+
+  .review-form__attraction-wrap {
+    width: 100%;
+    margin-left: 96px;
+  }
+
+  .review-form__attraction-item {
+    width: 259px;
+    margin-bottom: 32px;
+
+    &--bridge {
+      order: 1;
+    }
+
+    &--mountain {
+      order: 2;
+    }
+
+    &--park {
+      order: 3;
+    }
+
+    &--rock {
+      order: 4;
+    }
+  }
+
+  .review-form__fieldset-wrap--emotion {
+    margin-top: 23px;
+
+    .review-form__title {
+      margin-bottom: 57px;
+    }
+  }
+
+  .review-form__title {
+    margin-bottom: 56px;
+
+    font-size: 21px;
+    text-align: left;
+  }
+
+  .review-form__textarea {
+    width: 616px;
+  }
+
+  .review-form__footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    margin-top: 58px;
+    margin-bottom: 65px;
+  }
+
+  .review-form__button {
+    width: 324px;
+    margin: 0;
+  }
+
+  .review-form__text {
+    @include font-p;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .review-form {
+    margin-top: 42px;
+  }
+
+  .review-form__fieldset {
+    width: 480px;
+  }
+
+  .review-form__fieldset--wide {
+    width: 100%;
+
+    .review-form__title {
+      padding: 0 290px;
+    }
+  }
+
+  .review-form__title--wide {
+    &::before,
+    &::after {
+      width: 279px;
+    }
+  }
+
+  .review-form__fieldset-wrap--name {
+    margin-left: 79px;
+
+    .review-form__label:not(:last-of-type) {
+      margin-bottom: 35px;
+    }
+  }
+
+  .review-form__input {
+    &--name {
+      width: 318px;
+    }
+
+    &--surname {
+      width: 280px;
+    }
+
+    &--patronymic {
+      width: 282px;
+    }
+  }
+
+  .review-form__fieldset-wrap--impression {
+    .review-form__title {
+      margin-left: 80px;
+    }
+
+    .review-form__label {
+      padding-left: 80px;
+    }
+
+    .review-form__label::before {
+      left: 4px;
+    }
+  }
+
+  .review-form__input-radio:checked + .review-form__label--radio::after,
+  .review-form__input-radio:active + .review-form__label--radio::after {
+    left: 21px;
+  }
+
+  .review-form__fieldset-wrap--contacts {
+    margin-top: 65px;
+
+    .review-form__title {
+      margin-bottom: 74px;
+    }
+
+    .review-form__label {
+      width: auto;
+      margin: 0;
+      margin-right: 16px;
+      margin-bottom: 58px;
+    }
+
+    .review-form__label:nth-of-type(2n) {
+      margin-left: auto;
+    }
+
+    .review-form__input-wrap {
+      width: auto;
+    }
+
+    .review-form__input {
+      width: 283px;
+    }
+  }
+
+  .review-form__hidden-phone {
+    display: none;
+  }
+
+  .review-form__fieldset-wrap--attraction {
+    margin-top: 9px;
+
+    .review-form__title {
+      margin-bottom: 55px;
+    }
+  }
+
+  .review-form__attraction-wrap {
+    justify-content: space-between;
+    margin: 0;
+    padding-right: 4px;
+    padding-left: 1px;
+  }
+
+  .review-form__attraction-item {
+    width: auto;
+  }
+
+  .review-form__fieldset-wrap--emotion {
+    margin-top: 21px;
+
+    .review-form__title {
+      margin-bottom: 57px;
+    }
+  }
+
+  .review-form__footer {
+    margin-bottom: 71px;
+  }
+
+  .review-form__textarea {
+    width: 100%;
+  }
+
+  .review-form__button {
+    width: 480px;
   }
 }

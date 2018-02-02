@@ -1,0 +1,23 @@
+.copyright {
+  display: flex;
+  align-items: center;
+}
+
+.copyright__text {
+  position: relative;
+  top: -4px;
+}
+
+.copyright__image {
+  position: static;
+
+  margin-left: 14px;
+
+  &:hover {
+    fill: $color-link-hover;
+  }
+
+  &:active {
+    fill: $color-link-active;
+  }
+}

@@ -1,6 +1,8 @@
 .social {
   display: flex;
-  margin: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 151px;
   padding: 0;
 
   list-style: none;
@@ -11,4 +13,59 @@
   height: 48px;
 
   background-color: $color-bg-dark;
+
+  &:hover {
+    background-color: $color-menu-hover;
+  }
+
+  &:active {
+    background-color: $color-menu-active;
+  }
+}
+
+.social__link {
+  position: relative;
+
+  display: block;
+  width: 46px;
+  height: 48px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  &--twitter::before {
+    width: 18px;
+    height: 14px;
+    margin-top: -7px;
+    margin-left: -9px;
+
+    background-image: url("../img/icon-twitter.svg");
+  }
+
+  &--facebook::before {
+    width: 9px;
+    height: 18px;
+    margin-top: -9px;
+    margin-left: -4.5px;
+
+    background-image: url("../img/icon-facebook.svg");
+  }
+
+  &--youtube::before {
+    width: 20px;
+    height: 14px;
+    margin-top: -7px;
+    margin-left: -10px;
+
+    background-image: url("../img/icon-youtube.svg");
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
 }

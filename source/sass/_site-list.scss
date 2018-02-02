@@ -6,20 +6,139 @@
   background-color: $color-bg-dark;
 }
 
-@media (min-width: $width-tablet) {
-  .site-list {
-    display: flex;
-  }
-}
-
 .site-list__item {
-  text-align: center;
+  height: 55px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #678fa8;
+  }
+
+  &:not(:first-child) {
+    height: 54px;
+
+    border-top: 1px solid #9ac2db;
+  }
+
+  &:last-child {
+    box-shadow: inset 0 -7px 9px -7px rgba(0, 0, 0, 0.5);
+  }
+
+  &:hover {
+    background-color: $color-menu-hover;
+  }
+
+  &:active {
+    background-color: $color-menu-active;
+  }
 }
 
 .site-list__link {
   @include font-h;
 
+  display: block;
+  padding-top: 7px;
+  padding-bottom: 10px;
+
   line-height: 40px;
   color: $color-h-light;
   text-decoration: none;
+  text-align: center;
+
+  &:active {
+    color: $color-link-mobile-active;
+  }
+}
+
+@media (min-width: $width-tablet) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 27px;
+    padding-left: 48px;
+
+    background-color: $color-bg-light;
+  }
+
+  .site-list__item {
+    height: 56px;
+
+    &:not(:last-child) {
+      border-bottom: none;
+    }
+
+    &:not(:first-child) {
+      height: 56px;
+
+      border-top: none;
+    }
+
+    &:last-child {
+      box-shadow: none;
+    }
+
+    &:hover {
+      background-color: $color-bg-light;
+    }
+
+    &:active {
+      background-color: $color-bg-light;
+    }
+
+    &--gallery {
+      margin-left: 78px;
+    }
+
+    &--form {
+      margin-right: 50px;
+      margin-left: auto;
+    }
+  }
+
+  .site-list__link {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    font-size: 14px;
+    line-height: 26px;
+    color: $color-h-dark;
+    text-decoration: none;
+    text-align: left;
+
+    &:hover {
+      color: $color-link-hover;
+    }
+
+    &:active {
+      color: $color-link-active;
+    }
+
+    &--active {
+      color: $color-link-curent;
+    }
+
+    &--active:hover {
+      color: $color-link-curent-hover;
+    }
+
+    &--active:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .site-list {
+    padding-right: 71px;
+    padding-left: 91px;
+  }
+
+  .site-list__item {
+    &--gallery {
+      margin-left: 161px;
+    }
+
+    &--form {
+      margin-right: 137px;
+    }
+  }
 }

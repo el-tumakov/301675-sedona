@@ -1,22 +1,151 @@
 .advantages__list {
+  padding: 4px 0 37px;
+
   text-align: left;
 
   list-style: none;
   background-color: $color-bg-light;
 }
 
-@media (min-width: $width-tablet) {
-  .advantages__list {
-    display: flex;
+.advantages__item {
+  position: relative;
+
+  padding-left: 70px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    width: 38px;
+    height: 38px;
+
+    background-repeat: no-repeat;
+  }
+
+  &--house::before {
+    top: -7px;
+    left: 22px;
+
+    background-image: url("../img/icon-house.svg");
+    background-size: 37px 36px;
+  }
+
+  &--gift::before {
+    top: -9px;
+    left: 25px;
+
+    background-image: url("../img/icon-gift.svg");
+    background-size: 32px 37px;
+  }
+
+  &--food::before {
+    top: -4px;
+    left: 19px;
+
+    background-image: url("../img/icon-burger.svg");
+    background-size: 38px 34px;
   }
 }
 
 .advantages__title {
   @include font-h;
+
+  margin-top: 29px;
+  margin-bottom: 14px;
 }
 
 .advantages__description {
   @include font-p;
 
+  width: 220px;
+  margin: 0;
+
   line-height: 21px;
+}
+
+@media (min-width: $width-tablet) {
+  .advantages__list {
+    display: flex;
+    padding: 0;
+
+    text-align: center;
+  }
+
+  .advantages__item {
+    width: 256px;
+    min-height: 330px;
+    padding: 0;
+
+    &--gift {
+      order: 1;
+    }
+
+    &::before {
+      width: 77px;
+      height: 75px;
+    }
+
+    &--house::before {
+      top: 60px;
+      left: 90px;
+
+      background-size: 75px 72px;
+    }
+
+    &--gift::before {
+      top: 57px;
+      left: 95px;
+
+      background-size: 64px 75px;
+    }
+
+    &--food::before {
+      top: 63px;
+      left: 89px;
+
+      background-size: 77px 68px;
+    }
+  }
+
+  .advantages__title {
+    margin-top: 159px;
+
+    font-size: 21px;
+  }
+
+  .advantages__description {
+    width: 165px;
+    margin: 21px auto;
+
+    &--short {
+      width: 155px;
+    }
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .advantages__item {
+    width: 400px;
+
+    &--house::before {
+      left: 161px;
+    }
+
+    &--food::before {
+      left: 161px;
+    }
+
+    &--gift::before {
+      left: 167px;
+    }
+  }
+
+  .advantages__description {
+    width: 270px;
+
+    &--short {
+      width: 290px;
+    }
+  }
 }

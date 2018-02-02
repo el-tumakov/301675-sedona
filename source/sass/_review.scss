@@ -1,24 +1,43 @@
 .review {
+  margin-top: 37px;
+
   text-align: center;
+}
+
+.review__title {
+  @include font-h;
+
+  margin-bottom: 26px;
+}
+
+.review__intro {
+  @include font-p;
+
+  margin: 17px 0;
 }
 
 @media (min-width: $width-tablet) {
   .review {
     width: 648px;
     margin: 0 auto;
+    margin-top: 75px;
+  }
+
+  .review__title {
+    margin-bottom: 30px;
+
+    font-size: 30px;
+  }
+
+  .review__intro {
+    width: 450px;
+    margin: 15px auto;
   }
 }
 
 @media (min-width: $width-desktop) {
   .review {
     width: 960px;
+    margin-top: 112px;
   }
-}
-
-.review__title {
-  @include font-h;
-}
-
-.review__intro {
-  @include font-p;
 }
