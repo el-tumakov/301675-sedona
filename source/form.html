@@ -11,7 +11,11 @@
     <header class="page-header">
       <div class="page-header__wrapper page-header__wrapper--inner-page">
         <a class="page-header__logo" href="index.html">
-          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Логотип города Седона" width="102" height="83">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Логотип города Седона" width="102" height="83">
+          </picture>
         </a>
       </div>
       <nav class="main-nav main-nav--closed main-nav--nojs">
