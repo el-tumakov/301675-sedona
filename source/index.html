@@ -69,7 +69,11 @@
               <p class="features__number">&#150; №2 &#150;</p>
               <p class="features__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
-            <img class="features__image features__image--left" src="img/main-bridge-mobile@1x.jpg" alt="Фотография моста дьявола">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+              <img class="features__image features__image--left" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Фотография моста дьявола">
+            </picture>
           </li>
           <li class="features__item features__item--grey">
             <div class="features__text-wrapper">
@@ -103,7 +107,11 @@
       </section>
       <section class="contacts">
         <div class="contacts__map-wrapper">
-          <img class="contacts__map" src="img/bg-map-mobile@1x.jpg" alt="Адрес города Седона на карте" width="320" height="350">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+            <img class="contacts__map" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Адрес города Седона на карте" width="320" height="350">
+          </picture>
         </div>
       </section>
     </main>
@@ -123,5 +131,6 @@
       </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/picturefill.js"></script>
   </body>
 </html>
