@@ -130,7 +130,7 @@
 @media (min-width: $width-tablet) {
   .video {
     margin-top: 66px;
-    margin-bottom: 69px;
+    margin-bottom: 41px;
   }
 
   .video__title {
@@ -146,7 +146,7 @@
 
   .video__wrapper {
     width: 648px;
-    margin-top: 70px;
+    margin-top: 73px;
   }
 
   .video__film {
@@ -163,7 +163,7 @@
   }
 
   .video__controls {
-    bottom: 4px;
+    bottom: 3px;
     left: 0;
 
     width: 648px;
@@ -214,11 +214,12 @@
 @media (min-width: $width-desktop) {
   .video {
     margin-top: 70px;
-    margin-bottom: 111px;
+    margin-bottom: 85px;
   }
 
   .video__wrapper {
     width: 800px;
+    margin-top: 71px;
   }
 
   .video__film {
@@ -235,7 +236,7 @@
   }
 
   .video__controls {
-    bottom: 3px;
+    bottom: 4px;
 
     width: 800px;
   }
