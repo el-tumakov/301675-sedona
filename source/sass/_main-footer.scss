@@ -1,5 +1,6 @@
 .main-footer {
   width: 320px;
+  min-height: 206px;
   margin: 0 auto;
   margin-top: 32px;
 
@@ -34,7 +35,8 @@
     justify-content: space-between;
     align-items: center;
     width: 648px;
-    margin-top: 25px;
+    min-height: 115px;
+    margin: 0;
     padding: 0 60px;
   }
 

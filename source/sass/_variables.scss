@@ -14,6 +14,7 @@ $color-link-mobile-active: rgba(255, 255, 255, 0.3);
 
 // Переменные фоновых цветов
 
+$color-bg-body: #f2f2f2;
 $color-bg-dark: #81b3d2;
 $color-bg-light: #ffffff;
 $color-bg-light-2: #eeeeee;
@@ -45,3 +46,5 @@ $color-btn: #ffffff;
 $width-mobile: 320px;
 $width-tablet: 768px;
 $width-desktop: 1200px;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

@@ -21,8 +21,20 @@
 .video__wrapper {
   position: relative;
 
+  width: 320px;
   min-height: 267px;
+  margin: 0 auto;
   margin-top: 35px;
+}
+
+.video__film {
+  background-image: url("../img/video-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 320px 201px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/video-mobile@2x.jpg");
+  }
 }
 
 .video__controls {
@@ -73,6 +85,8 @@
   display: flex;
   align-items: center;
   height: 66px;
+
+  background-color: $color-gallery-light;
 }
 
 .video__button {
@@ -116,7 +130,7 @@
 @media (min-width: $width-tablet) {
   .video {
     margin-top: 66px;
-    margin-bottom: 69px;
+    margin-bottom: 41px;
   }
 
   .video__title {
@@ -131,17 +145,26 @@
   }
 
   .video__wrapper {
-    margin-top: 70px;
+    width: 648px;
+    margin-top: 73px;
   }
 
   .video__film {
     width: 648px;
     height: 499px;
+
+    background-image: url("../img/video-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 648px 499px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/video-tablet@2x.jpg");
+    }
   }
 
   .video__controls {
-    bottom: 0;
-    left: 60px;
+    bottom: 3px;
+    left: 0;
 
     width: 648px;
     height: 93px;
@@ -169,6 +192,8 @@
 
   .video__buttons {
     height: 37px;
+
+    background-color: transparent;
   }
 
   .video__button {
@@ -189,17 +214,29 @@
 @media (min-width: $width-desktop) {
   .video {
     margin-top: 70px;
-    margin-bottom: 111px;
+    margin-bottom: 85px;
+  }
+
+  .video__wrapper {
+    width: 800px;
+    margin-top: 71px;
   }
 
   .video__film {
     width: 800px;
     height: 500px;
+
+    background-image: url("../img/video-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 800px 500px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/video-desktop@2x.jpg");
+    }
   }
 
   .video__controls {
-    bottom: 3px;
-    left: 199px;
+    bottom: 4px;
 
     width: 800px;
   }

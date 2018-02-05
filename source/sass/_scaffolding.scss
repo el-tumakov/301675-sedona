@@ -1,3 +1,12 @@
 body {
-  margin: 0;
+  background-color: $color-bg-body;
+}
+
+picture {
+  font-size: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
