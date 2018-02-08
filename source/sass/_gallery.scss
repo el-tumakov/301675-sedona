@@ -78,6 +78,7 @@
 .gallery__like-icon {
   position: relative;
   top: 2px;
+  fill: $color-gallery-icon;
 
   margin-right: 15px;
 }
@@ -216,6 +217,6 @@
   }
 
   .gallery__like-icon {
-    fill: $color-p-light;
+    fill: $color-gallery-icon-desktop;
   }
 }
