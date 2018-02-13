@@ -167,6 +167,10 @@
   background-color: $color-bg-checkbox-circle;
 }
 
+.review-form__input-radio:focus + .review-form__label--radio::before {
+  background-color: $color-bg-checkbox-hover;
+}
+
 .review-form__label--checkbox {
   position: relative;
 
@@ -212,6 +216,10 @@
   border-left: 3px solid $color-bg-checkbox-daw;
 
   transform: rotate(-45deg);
+}
+
+.review-form__input-checkbox:focus + .review-form__label--checkbox::before {
+  background-color: $color-bg-checkbox-hover;
 }
 
 .review-form__input-wrap {
@@ -336,20 +344,21 @@
   }
 
   .review-form__title--wide {
+    position: relative;
+
     width: 100%;
     margin: 0 auto;
     padding: 0 120px;
-    position: relative;
 
     &::before,
     &::after {
       content: "";
 
       position: absolute;
+      top: 48%;
 
       width: 125px;
       height: 1px;
-      top: 48%;
 
       background-color: $color-line-3;
     }

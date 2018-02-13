@@ -5,6 +5,8 @@
     <title>HTML Academy: Седона</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2">
   </head>
   <body>
     <div class="container">
@@ -36,8 +38,8 @@
           </header>
           <form class="review-form" action="https://echo.htmlacademy.ru">
             <fieldset class="review-form__fieldset">
+              <legend class="review-form__title">Представьтесь:</legend>
               <div class="review-form__fieldset-wrap review-form__fieldset-wrap--name">
-                <legend class="review-form__title">Представьтесь:</legend>
                 <label class="review-form__label" for="name">Имя*:</label>
                 <input class="review-form__input review-form__input--name" type="text" name="name" id="name" placeholder="Петр" required>
                 <label class="review-form__label" for="surname">Фамилия*:</label>
@@ -47,8 +49,8 @@
               </div>
             </fieldset>
             <fieldset class="review-form__fieldset review-form__fieldset--wide">
+              <legend class="review-form__title review-form__title--wide">Контактная информация:</legend>
               <div class="review-form__fieldset-wrap review-form__fieldset-wrap--contacts">
-                <legend class="review-form__title review-form__title--wide">Контактная информация:</legend>
                 <label class="review-form__label review-form__label--phone" for="phone"><span class="review-form__hidden-phone">Контактный </span>телефон*:</label>
                 <div class="review-form__input-wrap review-form__input-wrap--phone">
                   <input class="review-form__input review-form__input--phone" type="tel" name="phone" id="phone" placeholder="Введите телефон" required>
@@ -60,8 +62,8 @@
               </div>
             </fieldset>
             <fieldset class="review-form__fieldset review-form__fieldset--impression">
+              <legend class="review-form__title">Ваше общее впечатление:</legend>
               <div class="review-form__fieldset-wrap review-form__fieldset-wrap--impression">
-                <legend class="review-form__title">Ваше общее впечатление:</legend>
                 <input class="visually-hidden review-form__input-radio" type="radio" name="impression" id="positive" value="positive" checked>
                 <label class="review-form__label review-form__label--bold review-form__label--radio" for="positive">Скорее положительное</label>
                 <input class="visually-hidden review-form__input-radio" type="radio" name="impression" id="negative" value="negative">
@@ -71,8 +73,8 @@
               </div>
             </fieldset>
             <fieldset class="review-form__fieldset review-form__fieldset--wide">
+              <legend class="review-form__title review-form__title--wide">Посещенные достопримечательности:</legend>
               <div class="review-form__fieldset-wrap review-form__fieldset-wrap--attraction">
-                <legend class="review-form__title review-form__title--wide">Посещенные достопримечательности:</legend>
                 <div class="review-form__attraction-wrap">
                   <div class="review-form__attraction-item review-form__attraction-item--bridge">
                     <input class="visually-hidden review-form__input-checkbox" type="checkbox" id="bridge" name="bridge" value="bridge" checked>
@@ -94,15 +96,15 @@
               </div>
             </fieldset>
             <fieldset class="review-form__fieldset review-form__fieldset--wide">
+              <legend class="review-form__title review-form__title--wide">Опишите свои эмоции:</legend>
               <div class="review-form__fieldset-wrap review-form__fieldset-wrap--emotion">
-                <legend class="review-form__title review-form__title--wide">Опишите свои эмоции:</legend>
                 <label class="visually-hidden" for="emotion">Поле ввода текста</label>
                 <textarea class="review-form__input review-form__textarea" name="emotion" id="emotion" placeholder="Опишите подробно все свои восторги"></textarea>
               </div>
             </fieldset>
             <div class="review-form__footer">
               <button class="review-form__button button">Отправить отзыв</button>
-              <p class="review-form__text">* &#150; обязательные поля</p>
+              <p class="review-form__text">* &ndash; обязательные поля</p>
             </div>
           </form>
         </section>
@@ -119,7 +121,7 @@
           <a class="copyright__link" href="http://htmlacademy.ru">
             <span class="visually-hidden">HTML Academy</span>
             <svg class="copyright__image" width="26.943px" height="34.09px">
-              <use xlink:href="img/sprite.svg#spr-logo-htmlacademy">
+              <use xlink:href="img/sprite.svg#spr-logo-htmlacademy"></use>
             </svg>
           </a>
         </div>

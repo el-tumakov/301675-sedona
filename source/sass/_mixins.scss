@@ -1,4 +1,4 @@
-// Примеси для вертикального ритма
+// Примеси для шрифтов
 
 @mixin font-h {
   font-family: $font-family;
@@ -16,6 +16,12 @@
   color: $color-p-dark;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+@mixin font {
+  font-family: $font;
+  font-style: normal;
+  font-display: swap;
 }
 
 
