@@ -3,7 +3,10 @@
 }
 
 .review-form__fieldset {
+  position: relative;
+
   display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0 20px;
 
@@ -15,11 +18,11 @@
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  padding-top: 17px;
 }
 
 .review-form__fieldset-wrap--name {
-  padding-bottom: 25px;
+  margin-top: 43px;
+  margin-bottom: 25px;
 
   .review-form__label {
     margin-top: 38px;
@@ -31,11 +34,8 @@
 }
 
 .review-form__fieldset-wrap--contacts {
-  padding-bottom: 28px;
-
-  .review-form__title {
-    margin-bottom: 9px;
-  }
+  margin-top: 52px;
+  margin-bottom: 28px;
 
   .review-form__label {
     margin-top: 13px;
@@ -49,11 +49,8 @@
 }
 
 .review-form__fieldset-wrap--impression {
-  padding-bottom: 24px;
-
-  .review-form__title {
-    margin-bottom: 14px;
-  }
+  margin-top: 57px;
+  margin-bottom: 24px;
 
   .review-form__label {
     width: 201px;
@@ -64,11 +61,8 @@
 }
 
 .review-form__fieldset-wrap--attraction {
-  padding-bottom: 11px;
-
-  .review-form__title {
-    margin-bottom: 32px;
-  }
+  margin-top: 100px;
+  margin-bottom: 12px;
 
   .review-form__label {
     width: 202px;
@@ -92,15 +86,16 @@
 }
 
 .review-form__fieldset-wrap--emotion {
-  padding-bottom: 25px;
-
-  .review-form__title {
-    margin-bottom: 18px;
-  }
+  margin-top: 61px;
+  margin-bottom: 25px;
 }
 
 .review-form__title {
   @include font-h;
+
+  position: absolute;
+  top: 18px;
+  left: 0;
 
   width: 100%;
   padding: 0;
@@ -321,17 +316,37 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 57px;
+    margin-top: 74px;
   }
 
   .review-form__fieldset {
-    width: 324px;
+    width: 323px;
     padding: 0;
 
     border: 0;
 
     &--impression {
       order: -1;
+
+      border-right: 1px solid $color-line-3;
+    }
+
+    &--contacts {
+      margin-top: 67px;
+    }
+
+    &--attraction {
+      margin-top: 43px;
+    }
+
+    &--emotion {
+      margin-top: 23px;
+    }
+  }
+
+  .review-form__fieldset--name {
+    .review-form__title {
+      left: 57px;
     }
   }
 
@@ -373,11 +388,11 @@
   }
 
   .review-form__fieldset-wrap {
-    padding: 0;
+    margin: 0;
   }
 
   .review-form__fieldset-wrap--name {
-    margin-top: 17px;
+    margin-top: 83px;
     margin-left: 58px;
     padding: 0;
 
@@ -405,14 +420,8 @@
   }
 
   .review-form__fieldset-wrap--impression {
-    margin-top: 17px;
+    margin-top: 99px;
     padding: 0;
-
-    border-right: 1px solid $color-line-3;
-
-    .review-form__title {
-      margin-bottom: 73px;
-    }
 
     .review-form__label {
       margin-top: 0;
@@ -425,11 +434,7 @@
   }
 
   .review-form__fieldset-wrap--contacts {
-    margin-top: 67px;
-
-    .review-form__title {
-      margin-bottom: 11px;
-    }
+    margin-top: 11px;
 
     .review-form__label {
       width: 100%;
@@ -447,11 +452,7 @@
   }
 
   .review-form__fieldset-wrap--attraction {
-    margin-top: 43px;
-
-    .review-form__title {
-      margin-bottom: 55px;
-    }
+    margin-top: 55px;
   }
 
   .review-form__attraction-wrap {
@@ -481,15 +482,11 @@
   }
 
   .review-form__fieldset-wrap--emotion {
-    margin-top: 23px;
-
-    .review-form__title {
-      margin-bottom: 57px;
-    }
+    margin-top: 57px;
   }
 
   .review-form__title {
-    margin-bottom: 56px;
+    top: 0;
 
     font-size: 21px;
     text-align: left;
@@ -521,11 +518,37 @@
 
 @media (min-width: $width-desktop) {
   .review-form {
-    margin-top: 42px;
+    margin-top: 59px;
   }
 
   .review-form__fieldset {
     width: 480px;
+
+    &--contacts {
+      margin-top: 65px;
+    }
+
+    &--attraction {
+      margin-top: 10px;
+    }
+
+    &--emotion {
+      margin-top: 21px;
+    }
+  }
+
+  .review-form__fieldset--name {
+    width: 479px;
+
+    .review-form__title {
+      left: 79px;
+    }
+  }
+
+  .review-form__fieldset--impression {
+    .review-form__title {
+      left: 79px;
+    }
   }
 
   .review-form__fieldset--wide {
@@ -566,10 +589,6 @@
   }
 
   .review-form__fieldset-wrap--impression {
-    .review-form__title {
-      margin-left: 80px;
-    }
-
     .review-form__label {
       padding-left: 80px;
     }
@@ -585,11 +604,7 @@
   }
 
   .review-form__fieldset-wrap--contacts {
-    margin-top: 65px;
-
-    .review-form__title {
-      margin-bottom: 74px;
-    }
+    margin-top: 74px;
 
     .review-form__label {
       width: auto;
@@ -616,11 +631,7 @@
   }
 
   .review-form__fieldset-wrap--attraction {
-    margin-top: 9px;
-
-    .review-form__title {
-      margin-bottom: 55px;
-    }
+    margin-top: 54px;
   }
 
   .review-form__attraction-wrap {
@@ -635,11 +646,7 @@
   }
 
   .review-form__fieldset-wrap--emotion {
-    margin-top: 21px;
-
-    .review-form__title {
-      margin-bottom: 57px;
-    }
+    margin-top: 57px;
   }
 
   .review-form__footer {
